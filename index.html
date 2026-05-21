@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img class="logo-sizing" src="/images/weather - logo.png" alt="" />
+          <h1>Weather</h1>
+        </div>
+        <ul>
+          <li>Current Weather</li>
+          <li>Forecasts</li>
+          <li>Gallery</li>
+          <li class="li-contact">Contacts</li>
+          <li>Newsletter</li>
+        </ul>
+        <span class="material-symbols-outlined menu-button" id="openMenuBtn">
+          menu
+        </span>
+      </nav>
+
+      <ul class="menu" id="menuTab">
+        <li>
+          <span class="material-symbols-outlined close-menu" id="closeMenuBtn">
+            close
+          </span>
+        </li>
+        <li>Current Weather</li>
+        <li>Forecasts</li>
+        <li>Gallery</li>
+        <li class="li-contact">Contacts</li>
+        <li>Newsletter</li>
+      </ul>
+    </header>
+    <main>
+      <div class="location">
+        <div class="search">
+          <input
+            type="text"
+            name="text"
+            id="weatherInput"
+            placeholder="Search for weather by city, zip code or coordinates"
+          />
+          <button type="submit" id="searchWeather">Search</button>
+        </div>
+        <div class="details" id="details">
+          <div class="place">
+            <img src="/images/location.png" alt="" />
+            <h2 id="location"></h2>
+          </div>
+          <div class="date">
+            <img src="/images/calendar.png" alt="" />
+            <h3 id="currentDate"></h3>
+          </div>
+          <div class="temperature">
+            <img src="/images/thermometer.png" alt="" />
+            <h1 id="currentTemperature"></h1>
+          </div>
+          <div class="sunny">
+            <img src="/images/sun.png" alt="" />
+            <h2 id="currentMain"></h2>
+          </div>
+          <div class="feels">
+            <img src="/images/water.png" alt="" />
+            <h3 id="currentFeels"></h3>
+          </div>
+          <div class="humidity">
+            <img src="/images/raindrop.png" alt="" />
+            <h3 id="currentHumidity"></h3>
+          </div>
+          <div class="wind">
+            <img src="/images/wind.png" alt="" />
+            <h3 id="currentWind"></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-forecast" id="weatherForecast">
+        <h1>Weather Forecast</h1>
+        <div class="weather-forecast-cards">
+          <div class="weather-forecast-card">
+            <p id="weatherForecastDate">Monday, 29th August</p>
+            <!-- <div class="icon">
+              <img src="/images/sun (1).png" alt="" />
+            </div> -->
+            <div class="forecast-temperature">
+              <img src="/images/thermometer blue.png" alt="" />
+              <h2 id="forecastTemperature">75°F</h2>
+            </div>
+            <h3 id="forecastMain">Sunny</h3>
+            <div class="wind-forecast">
+              <span class="material-symbols-outlined"> air </span>
+              <p id="forecastWind">Wind: 10 mph E</p>
+            </div>
+            <div class="humidity-forecast">
+              <span class="material-symbols-outlined"> water_drop </span>
+              <p id="forecastHumidity">Humidity: 60%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <h1>Gallery</h1>
+        <div class="gallery-cards">
+          <div class="john-doe gallery-card">
+            <img src="/images/john doe.jpg" alt="" />
+            <p>Sent by: John Doe</p>
+            <p>Location: New York, USA</p>
+            <p class="ratings">
+              Rating:
+              <span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span>
+              <span class="material-symbols-outlined"> star_half </span>
+            </p>
+          </div>
+          <div class="jane-doe gallery-card">
+            <img src="/images/jane doe.jpg" alt="" />
+            <p>Sent by: Jane Doe</p>
+            <p>Location: Los Angeles, USA</p>
+            <p class="ratings">
+              Rating:
+              <span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span>
+              <span class="material-symbols-outlined"> star_half </span>
+            </p>
+          </div>
+          <div class="susan-smith gallery-card">
+            <img src="/images/susan smith.jpg" alt="" />
+            <p>Sent by: Susan Smith</p>
+            <p>Location: London, UK</p>
+            <p class="ratings">
+              Rating:
+              <span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span>
+              <span class="material-symbols-outlined"> star_half </span>
+            </p>
+          </div>
+          <div class="michael-jones gallery-card">
+            <img src="/images/michael jones.jpg" alt="" />
+            <p>Sent by: Michael Jones</p>
+            <p>Location: Paris, France</p>
+            <p class="ratings">
+              Rating:
+              <span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span>
+              <span class="material-symbols-outlined"> star_half </span>
+            </p>
+          </div>
+          <div class="david-brown gallery-card">
+            <img src="/images/david brown.jpg" alt="" />
+            <p>Sent by: David Brown</p>
+            <p>Location: Sydney, Australia</p>
+            <p class="ratings">
+              Rating:
+              <span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span>
+              <span class="material-symbols-outlined"> star_half </span>
+            </p>
+          </div>
+          <div class="emily-white gallery-card">
+            <img src="/images/emily white.jpg" alt="" />
+            <p>Sent by: Emily White</p>
+            <p>Location: Tokyo, Japan</p>
+            <p class="ratings">
+              Rating:
+              <span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span>
+              <span class="material-symbols-outlined"> star_half </span>
+            </p>
+          </div>
+          <div class="peter-green gallery-card">
+            <img src="/images/peter green.jpg" alt="" />
+            <p>Sent by: Peter Green</p>
+            <p>Location: Berlin, Germany</p>
+            <p class="ratings">
+              Rating:
+              <span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span>
+              <span class="material-symbols-outlined"> star_half </span>
+            </p>
+          </div>
+          <div class="sarah-black gallery-card">
+            <img src="/images/sarah black.jpg" alt="" />
+            <p>Sent by: Sarah Black</p>
+            <p>Location: Rome, Italy</p>
+            <p class="ratings">
+              Rating:
+              <span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span>
+              <span class="material-symbols-outlined"> star_half </span>
+            </p>
+          </div>
+          <div class="william-blue gallery-card">
+            <img src="/images/william blue.jpg" alt="" />
+            <p>Sent by: William Blue</p>
+            <p>Location: Barcelona, Spain</p>
+            <p class="ratings">
+              Rating:
+              <span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span
+              ><span class="material-symbols-outlined"> star </span>
+              <span class="material-symbols-outlined"> star_half </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-us">
+        <h1>Contact Us</h1>
+        <div class="inputs">
+          <input type="text" name="" id="" placeholder="Your Name" />
+          <input type="email" name="" id="" placeholder="Your Email" />
+          <textarea name="" id="" placeholder="Your Message"></textarea>
+          <button type="submit">Submit Your Inquiry</button>
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <h1>Subscribe to Our Newsletter</h1>
+        <p>Get the latest weather updates directly to your inbox.</p>
+        <div class="subscribe">
+          <input type="email" name="" id="" placeholder="Enter your email" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="top-writeup">
+        <div class="service">
+          <div class="footer-weather-service">
+            <img
+              class="footer-logo-sizing"
+              src="/images/weather - logo.png"
+              alt=""
+            />
+            <h1>Your Weather Service</h1>
+          </div>
+          <p>Providing accurate weather forecasts since 2020.</p>
+          <div class="footer-icons">
+            <a href=""
+              ><img
+                class="social-icon-sizing"
+                src="/images/facebook.png"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                class="social-icon-sizing"
+                src="/images/twitter (1).png"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                class="social-icon-sizing"
+                src="/images/instagram (1).png"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+        <div class="links">
+          <h1>Quick Links</h1>
+          <a href="#"><p>Current Weather</p></a>
+          <a href="#"><p>Weather Alerts</p></a>
+          <a href="#"><p>Contacts</p></a>
+        </div>
+        <div class="legal">
+          <h1>Legal</h1>
+          <a href=""><p>Terms of Use</p></a>
+          <a href=""><p>Privacy Policy</p></a>
+          <a href=""><p>Cookie Policy</p></a>
+          <a href=""><p>Disclaimer</p></a>
+        </div>
+      </div>
+      <div class="footer-paragraph">
+        <p>© Your Weather Service <span>2025</span>. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
