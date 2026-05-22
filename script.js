@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    currentWeatherDetails.style.display = "flex";
-    weatherForecast.style.display = "flex";
-
     fetchCurrentData(city);
     fetchForecastData(city);
+
+    currentWeatherDetails.style.display = "flex";
+    weatherForecast.style.display = "flex";
   });
 
   openMenuBtn.addEventListener("click", function () {
