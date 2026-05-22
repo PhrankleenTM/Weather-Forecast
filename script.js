@@ -1,5 +1,3 @@
-import CONFIG from "./config.js";
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuTab = document.getElementById("menuTab");
   const openMenuBtn = document.getElementById("openMenuBtn");
@@ -21,10 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const forecastWind = document.getElementById("forecastWind");
   const forecastHumidity = document.getElementById("forecastHumidity");
 
-
   currentWeatherDetails.style.display = "none";
   weatherForecast.style.display = "none";
-
 
   searchWeather.addEventListener("click", function () {
     const city = weatherInput.value.trim();
@@ -51,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function fetchCurrentData(city) {
     try {
-      const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${CONFIG.API_KEY}`;
+      const URL = `/api/weather?city=${city}`;
 
       const response = await fetch(URL);
 
@@ -85,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function fetchForecastData(city) {
     try {
-      const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/next5days?unitGroup=us&key=${CONFIG.FORECAST_API}`;
+      const URL = `/api/weather?city=${city}`;
 
       const response = await fetch(URL);
 
@@ -114,7 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Failed to fetch weather data. Please check the city name.");
     }
   }
-
 
   weatherInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
