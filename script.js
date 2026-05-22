@@ -21,9 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const forecastWind = document.getElementById("forecastWind");
   const forecastHumidity = document.getElementById("forecastHumidity");
 
-  currentWeatherDetails.style.display = "none";
-  weatherForecast.style.display = "none";
-
   searchWeather.addEventListener("click", function () {
     const city = weatherInput.value.trim();
 
@@ -105,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       weatherForecastDate.innerHTML = `${formatDate}`;
       forecastTemperature.innerHTML = `${((data.days[1].temp - 32) * (5 / 9)).toFixed(2)}°C`;
       forecastMain.innerHTML = `${data.days[1].conditions}`;
-      forecastWind.innerHTML = `${data.days[1].windspeed / 10} mph`;
+      forecastWind.innerHTML = `${(data.days[1].windspeed / 10).toFixed(2)} mph`;
       forecastHumidity.innerHTML = `Humidity - ${data.days[1].humidity}%`;
     } catch (error) {
       console.error("Error fetching weather:", error);

@@ -312,7 +312,7 @@ main .location .details .wind h3 {
 
 /* ========== WEATHER FORECAST ========== */
 main .weather-forecast {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
