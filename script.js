@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const forecastMain = document.getElementById("forecastMain");
   const forecastWind = document.getElementById("forecastWind");
   const forecastHumidity = document.getElementById("forecastHumidity");
+  const icon = document.getElementById("icon");
+  const iconElement = document.getElementById("weatherIcon");
 
   searchWeather.addEventListener("click", function () {
     const city = weatherInput.value.trim();
@@ -101,6 +103,20 @@ document.addEventListener("DOMContentLoaded", function () {
       forecastMain.innerHTML = `${data.days[1].conditions}`;
       forecastWind.innerHTML = `${(data.days[1].windspeed / 10).toFixed(2)} mph`;
       forecastHumidity.innerHTML = `Humidity - ${data.days[1].humidity}%`;
+
+      const iconMap = {
+        "clear-day": "wi-day-sunny",
+        "clear-night": "wi-night-clear",
+        "partly-cloudy-day": "wi-day-cloudy",
+        "partly-cloudy-night": "wi-night-alt-cloudy",
+        cloudy: "wi-cloudy",
+        rain: "wi-rain",
+        snow: "wi-snow",
+        fog: "wi-fog",
+      };
+
+      const weatherIcon = data.days[1].icon;
+      iconElement.className = `wi ${iconMap[weatherIcon]}`;
 
       currentWeatherDetails.style.display = "flex";
       weatherForecast.style.display = "flex";

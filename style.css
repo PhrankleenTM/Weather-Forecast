@@ -209,7 +209,7 @@ main .location .details .place img {
 }
 
 main .location .details .place h2 {
-  font-size: 25px;
+  font-size: 40px;
 }
 
 main .location .details .date {
@@ -237,12 +237,12 @@ main .location .details .temperature {
 }
 
 main .location .details .temperature img {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
 }
 
 main .location .details .temperature h1 {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 main .location .details .sunny {
@@ -351,14 +351,10 @@ main .weather-forecast .weather-forecast-cards .weather-forecast-card p {
   color: #555555;
 }
 
-main
-  .weather-forecast
-  .weather-forecast-cards
-  .weather-forecast-card
-  .icon
-  img {
-  height: 100px;
-  width: 100px;
+main .weather-forecast .weather-forecast-cards .weather-forecast-card .icon i {
+  font-size: 50px;
+  margin-top: 1.5rem;
+  color: var(--color-primary);
 }
 
 main
