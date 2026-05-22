@@ -1,0 +1,6 @@
+const CONFIG = {
+  API_KEY: "3ef12b02a036476ffa0fa7d6e79e4260",
+  FORECAST_API: "2SD4E936FLG4UCHQ2J6A6URQB",
+};
+
+export default CONFIG;
