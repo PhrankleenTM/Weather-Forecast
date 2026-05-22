@@ -31,9 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetchCurrentData(city);
     fetchForecastData(city);
-
-    currentWeatherDetails.style.display = "flex";
-    weatherForecast.style.display = "flex";
   });
 
   openMenuBtn.addEventListener("click", function () {
@@ -104,6 +101,9 @@ document.addEventListener("DOMContentLoaded", function () {
       forecastMain.innerHTML = `${data.days[1].conditions}`;
       forecastWind.innerHTML = `${(data.days[1].windspeed / 10).toFixed(2)} mph`;
       forecastHumidity.innerHTML = `Humidity - ${data.days[1].humidity}%`;
+
+      currentWeatherDetails.style.display = "flex";
+      weatherForecast.style.display = "flex";
     } catch (error) {
       console.error("Error fetching weather:", error);
       alert("Failed to fetch weather data. Please check the city name.");
